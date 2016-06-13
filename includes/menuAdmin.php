@@ -1,61 +1,50 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Administration</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="index.php">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Evaluateur <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="addEvaluateur.php">Ajouter</a></li>
-                        <li><a href="afecterEva.php">Affecter</a></li>
-                        <li><a href="listEvaluator.php">Liste</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="addCategorie.php">Ajouter</a></li>
-                        <li><a href="listCategorie.php">Lister</a></li>
-                    </ul>
-                </li>
-                <li><a href="addSujet.php">Ajouter Sujet</a></li>
-                <li><a href="listProjet.php">Projets</a></li>
-            </ul>
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <?php if (!isset($_SESSION['id'])){ ?>
-                    <li><a href="loginPage.php"><i class="fa fa-power-off">Login</i></a></li>
-                <?php }else { ?>
-                    <li><a href="../scripts/logout.php?dec"><i class="fa fa-power-off">Log out</i></a></li>
-                <?php }?>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+<!-- START X-NAVIGATION VERTICAL -->
+<ul class="x-navigation x-navigation-horizontal">
+    <li class="xn-logo">
+        <a href="http://www.irc.ma/" target="_blank">Appl Project</a>
+        <a href="#" class="x-navigation-control"></a>
+    </li>
+    <li class="xn-openable">
+        <a href="index.php"><span class="fa fa-home"></span> <span class="xn-text">Home</span></a>
+    </li>
+    <li class="xn-openable">
+        <a href="#"><span class="fa fa-angle-down"></span> Evaluateur</a>
+        <ul>
+            <li><a href="addEvaluateur.php"><span class="fa fa-plus"></span> Ajouter</a></li>
+            <li><a href="afecterEva.php"><span class="fa fa-link"></span> Affecter</a></li>
+            <li><a href="listEvaluator.php"><span class="fa fa-list"></span> Liste</a></li>
+        </ul>
+    </li>
+    <li class="xn-openable">
+        <a href="#"><span class="fa fa-angle-down"></span> Categories</a>
+        <ul>
+            <li><a href="addCategorie.php"><span class="fa fa-plus"></span> Ajouter</a></li>
+            <li><a href="listCategorie.php"><span class="fa fa-list"></span> Lister</a></li>
+        </ul>
+    </li>
+    <li class="xn-openable">
+        <a href="addSujet.php"><span class="fa fa-plus"></span> Ajouter Sujet</a>
+    </li>
+    <li class="xn-openable">
+        <a href="listProjet.php"><span class="fa fa-list"></span> Projets</a>
+    </li>
+    <!-- POWER OFF -->
+    <li class="xn-openable pull-right">
+        <?php if (!isset($_SESSION['id'])){ ?>
+            <a href="loginPage.php"><span class="fa fa-sign-in"></span> Se connecter</a>
+        <?php }else { ?>
+            <a href="../scripts/logout.php?dec" ><span class="fa fa-sign-out"></span> Se Déconnecter</a>
+        <?php }?>
+    </li>
+    <!-- END POWER OFF -->
+    <li class="xn-openable pull-right last">
+        <a href="#"><span class="fa fa-plus"></span> Profil</a>
+        <ul>
+            <li><a href="showProfil.php"><i class="fa fa-eye"></i> Afficher</a></li>
+            <li><a href="editeProfil"><i class="fa fa-cloud"></i> Modifier</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="../scripts/logout.php?dec"><i class="fa fa-sign-out"></i> Se déconnecté</a></li>
+        </ul>
+    </li>
+</ul>
+<!-- END X-NAVIGATION VERTICAL -->
