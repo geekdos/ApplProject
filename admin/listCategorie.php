@@ -55,7 +55,6 @@ $subject = new Sujet();
                                         <ul class="panel-controls">
                                             <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
                                             <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
-                                            <?= "<a href='../scripts/supprimerCategorie.php?id_categorie=".$values['id_categorie']."' class='btn btn-danger'><span class='fa fa-times'></span></a>" ?>
                                         </ul>
                                     </div>
                                     <div class="panel-body">
@@ -75,7 +74,7 @@ $subject = new Sujet();
                                         </table>
                                     </div>
                                     <div class="panel-footer">
-                                        <button class="btn btn-primary pull-right">Button</button>
+                                        <?= "<a href='../scripts/supprimerCategorie.php?id_categorie=".$values['id_categorie']."' class='btn btn-danger pull-right'><span class='fa fa-trash-o'></span></a>" ?>
                                     </div>
                                 </div>
                                 <!-- END PANEL WITH CONTROL CLASSES -->
