@@ -70,8 +70,20 @@
                                             <tr>
                                                 <td><?= $values->getTitre(); ?></td>
                                                 <td><?= $values->getNomSujet(); ?></td>
-                                                <td><?= $values->getPriorite(); ?></td>
-                                                <td><?= $values->getStatus(); ?></td>
+                                                <td>
+                                                    <?php if ($values->getPriorite() == 'urgent'){ ?>
+                                                        <span class="badge badge-danger"><?= $values->getPriorite() ?></span>
+                                                    <?php }else{ ?>
+                                                        <span class="badge badge-info"><?= $values->getPriorite() ?></span>
+                                                    <?php } ?>
+                                                </td>
+                                                <td>
+                                                    <?php if ($values->getStatus() == 'enAttente'){ ?>
+                                                        <span class="badge badge-warning"><?= $values->getStatus(); ?></span>
+                                                    <?php }else{ ?>
+                                                        <span class="badge badge-success"><?= $values->getStatus(); ?></span>
+                                                    <?php } ?>
+                                                </td>
                                                 <td class="text-center">
                                                     <a href="<?= '../scripts/supprimerProjet.php?id_projet='.$values->getIdProjet() ?>" class="btn btn-danger btn-xs">
                                                         <span class="fa fa-recycle"></span> Supprimer
