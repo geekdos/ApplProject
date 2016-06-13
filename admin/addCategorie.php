@@ -1,49 +1,92 @@
-<?php session_start();?>
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin</title>
+    <!-- META SECTION -->
+    <title>Atlant - Responsive Bootstrap Admin Template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <!-- END META SECTION -->
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- CSS INCLUDE -->
+    <link rel="stylesheet" type="text/css" id="theme" href="../asset/css/theme-default.css"/>
+    <!-- EOF CSS INCLUDE -->
 </head>
 <body>
-<?php require_once '../includes/menuAdmin.php'?>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <form action="../scripts/ajouterCategorie.php" method="post" id="profilpost" name="profil">
-                <div class="container-fluid">
-                    <div data-wizard-init>
-                        <div class="steps-content">
-                            <div data-step="1">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Nom Categorie</label>
-                                    <input type="text" class="form-control" name="nomCategorie" id="exampleInputEmail1" placeholder="nom categorie">
+<!-- START PAGE CONTAINER -->
+<div class="page-container page-navigation-top">
+    <!-- PAGE CONTENT -->
+    <div class="page-content">
+
+        <?php require_once '../includes/menuAdmin.php'?>
+
+        <div class="page-title">
+            <h2><span class="fa fa-arrow-circle-o-left"></span> Accuiel</h2>
+        </div>
+
+        <!-- PAGE CONTENT WRAPPER -->
+        <div class="page-content-wrap">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <!-- START VERTICAL FORM SAMPLE -->
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <h3>Vertical Form Sample</h3>
+                                    <form action="../scripts/ajouterCategorie.php" method="post" role="form">
+                                        <div class="form-group">
+                                            <label form="addCatego">Nom Categorie</label>
+                                            <input type="text" id="addCatego" name="nomCategorie" class="form-control" placeholder="Le Nom du Categorie" required="required"/>
+                                            <span class="help-block">Taper le nom d'un categorie qui n'éxiste pas dans la liste</span>
+                                        </div>
+                                        <button type="submit" name="saveCat" class="btn btn-success"><span class="fa fa-plus"></span> Ajouter</button>
+                                    </form>
                                 </div>
-                                <hr>
-                                <button type="submit" name="saveCat" class="btn btn-success">Ajouter</button>
                             </div>
+                            <!-- END VERTICAL FORM SAMPLE -->
                         </div>
                     </div>
                 </div>
-            </form>
+            </div>
+
         </div>
+        <!-- PAGE CONTENT WRAPPER -->
     </div>
+    <!-- END PAGE CONTENT -->
 </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../assets/js/bootstrap.min.js"></script>
+<!-- END PAGE CONTAINER -->
+
+<!-- START SCRIPTS -->
+<!-- START PLUGINS -->
+<script type="text/javascript" src="../asset/js/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../asset/js/plugins/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../asset/js/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- END PLUGINS -->
+
+<!-- THIS PAGE PLUGINS -->
+<script type='text/javascript' src='../asset/js/plugins/icheck/icheck.min.js'></script>
+<script type="text/javascript" src="../asset/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="../asset/js/plugins/datatables/jquery.dataTables.min.js"></script>
+<!-- END PAGE PLUGINS -->
+
+<!-- START TEMPLATE -->
+<script type="text/javascript" src="../asset/js/plugins.js"></script>
+<script type="text/javascript" src="../asset/js/actions.js"></script>
+<!-- END TEMPLATE -->
+<!-- END SCRIPTS -->
 </body>
 </html>
+
+
+
+
+
+
