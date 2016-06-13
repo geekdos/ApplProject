@@ -33,7 +33,7 @@ $curentCandidate = $candidat->getProfilById();
     <!-- PAGE CONTENT -->
     <div class="page-content">
 
-        <?php require_once '../includes/menuCandidat.php' ?>
+        <?php require_once '../includes/menuCandidate.php' ?>
 
         <!-- PAGE TITLE -->
         <div class="page-title">

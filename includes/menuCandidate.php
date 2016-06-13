@@ -10,8 +10,8 @@
     <li class="xn-openable">
         <a href="#"><span class="fa fa-plus"></span> Mes projets</a>
         <ul>
-            <li><a href="pages-registration.html">Lister</a></li>
-            <li><a href="pages-registration-login.html">Postuler</a></li>
+            <li><a href="listProjet.php">Lister</a></li>
+            <li><a href="addProjet.php">Postuler</a></li>
         </ul>
     </li>
     <!-- POWER OFF -->

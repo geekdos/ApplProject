@@ -29,10 +29,10 @@
     <!-- PAGE CONTENT -->
     <div class="page-content">
 
-        <?php require_once '../includes/menuCandidat.php';  ?>
+        <?php require_once '../includes/menuCandidate.php';  ?>
 
         <div class="page-title">
-            <h2><span class="fa fa-arrow-circle-o-left"></span> Accuiel</h2>
+            <h2><span class="fa fa-arrow-circle-o-left"></span> Accueil Candidat</h2>
         </div>
 
         <!-- PAGE CONTENT WRAPPER -->
@@ -44,7 +44,7 @@
                         <div class="panel-body">
                             <?php
 
-                                 require_once '../includes/listCategorieSujet.php';
+                                 require_once '../includes/listCategorySubject.php';
                             ?>
                         </div>
                     </div>

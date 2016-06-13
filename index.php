@@ -42,7 +42,7 @@ $sujet = new Sujet();
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <?php
-                            require_once 'includes/listCategorieSujet.php'
+                            require_once 'includes/listCategorySubject.php'
                             ?>
                         </div>
                     </div>
