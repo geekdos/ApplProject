@@ -303,6 +303,30 @@ class Projet
         return $projectsList;
     }
 
+    public function getAllProject(){
+
+        $projects = $this->getDb()->get('projet');
+
+        $projectsList = array();
+        foreach ($projects as $values){
+            $project = new Projet();
+
+            $project->setIdSujet($values['id_sujet']);
+            $project->setIdProjet($values['id_projet']);
+
+            $project->setTitre($values['titre']);
+            $project->setPriorite($values['priorite']);
+            $project->setStatus($values['status']);
+
+            $project->getDb()->where('id_sujet', $project->getIdSujet());
+            $evaInfo = $project->getDb()->get('sujet');
+            $project->setNomSujet($evaInfo[0]['nom_sujet']);
+
+            $projectsList [] = $project;
+        }
+        return $projectsList;
+    }
+
     public function deleteProjectById(){
         $this->getDb()->where('id_projet', $this->getIdProjet());
         return $this->getDb()->delete('projet');
